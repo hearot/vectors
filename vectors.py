@@ -1,5 +1,4 @@
 from sympy import Symbol, symbols
-import numpy as np
 import sympy as sp
 
 i = Symbol('i')
@@ -46,13 +45,12 @@ class Vector:
         return sp.atan(sp.Rational(self.vector.coeff(j), self.vector.coeff(i)))
 
     def cross(self, u):
-        matrix = np.array([[i, j, k],
-                        [self.vector.coeff(i), self.vector.coeff(j),
-                         self.vector.coeff(k)],
-                        [u.vector.coeff(i), u.vector.coeff(j),
-                         u.vector.coeff(k)]])
-        return Vector.from_symbols(sp.Matrix(matrix).det())
-
+        return Vector.from_symbols(
+            sp.Matrix([[i, j, k],
+                       [self.vector.coeff(i), self.vector.coeff(j),
+                        self.vector.coeff(k)],
+                       [u.vector.coeff(i), u.vector.coeff(j),
+                        u.vector.coeff(k)]]).det())
 
     def dot(self, u):
         return (self.vector.coeff(i)*u.vector.coeff(i) +
@@ -68,7 +66,8 @@ class Vector:
         return sp.sqrt(self.vector.coeff(i)**2 +
                        self.vector.coeff(j)**2 +
                        self.vector.coeff(k)**2)
-        
+
+
 v_x, v_y, v_z = symbols('v_x, v_y, v_z')
 u_x, u_y, u_z = symbols('u_x, u_y, u_z')
 
