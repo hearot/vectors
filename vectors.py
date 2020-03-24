@@ -9,7 +9,7 @@ k = Symbol('k')
 class Vector:
     vector = 0
     
-    def __init__(self, x, y, z):
+    def __init__(self, x=0, y=0, z=0):
         self.vector = x*i + y*j + z*k
         
     def __add__(self, u):
