@@ -2,6 +2,13 @@
 
 ![Vectors](images/vectors.png)
 
+## Installation
+You can just use `pip` by typing:
+
+```
+pip install git+https://github.com/hearot/vectors.git
+```
+
 ## Initialization
 
 ### Constructor

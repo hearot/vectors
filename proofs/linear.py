@@ -1,5 +1,5 @@
-import os, sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 from vectors import u, v
 from sympy import symbols
