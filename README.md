@@ -37,9 +37,9 @@ Vector(0, 1, 0)
    - `a**b` - equivalent to `a.cross(b)`, the cross product between `a` and `b`.
    - `a|b` - the angle between `a` and `b` (computer using the dot product).
    - `a^b` - the angle between `a` and `b` (computed using the cross product).
-   - `a.azimuthal` - the azimuthal angle (see Spherical Coordinates [Wikipedia](https://en.wikipedia.org/wiki/Spherical_coordinate_system) [Wolfram MathWorld](https://mathworld.wolfram.com/SphericalCoordinates.html)).
+   - `a.azimuthal` - the azimuthal angle (see Spherical Coordinates on [Wikipedia](https://en.wikipedia.org/wiki/Spherical_coordinate_system) and [Wolfram MathWorld](https://mathworld.wolfram.com/SphericalCoordinates.html)).
    - `abs(a)` - equivalent to `a.module`, the module of the vector.
-   - `a.polar` - the polar angle (see Spherical Coordinates [Wikipedia](https://en.wikipedia.org/wiki/Spherical_coordinate_system) [Wolfram MathWorld](https://mathworld.wolfram.com/SphericalCoordinates.html)).
+   - `a.polar` - the polar angle (see Spherical Coordinates on [Wikipedia](https://en.wikipedia.org/wiki/Spherical_coordinate_system) and [Wolfram MathWorld](https://mathworld.wolfram.com/SphericalCoordinates.html)).
 
 ## Proofs
 - [proofs/linear.py](proofs/linear.py) - proof of `a**b` being always orthogonal to a linear combination of `a` and `b`.
