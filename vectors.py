@@ -24,6 +24,9 @@ class Vector:
         
         self.vector = x*i + y*j + z*k
         
+    def __abs__(self):
+        return self.module
+        
     def __add__(self, u):
         return Vector.from_symbols(self.vector+u.vector)
         
@@ -78,7 +81,7 @@ class Vector:
                 self.vector.coeff(k)*u.vector.coeff(k))
         
     @staticmethod
-    def from_polar(r, theta, phi):
+    def from_polar(r=0, theta=0, phi=0):
         r = convert_to_sympy(r)
         theta = convert_to_sympy(theta)
         phi = convert_to_sympy(phi)
